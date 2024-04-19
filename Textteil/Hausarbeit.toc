@@ -1,0 +1,25 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Aufgabenteil 1}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Aufgabenteil 2}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Python-Bibliotheken und -Module}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Pandas-Bibliothek}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Matplotlib-Bibliothek}{2}{section.2.2}%
+\contentsline {section}{\numberline {2.3}SQL-Alchemy-Bibliothek}{2}{section.2.3}%
+\contentsline {section}{\numberline {2.4}UnitTest-Bibliothek}{3}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Tkinter-Modul}{3}{section.2.5}%
+\contentsline {section}{\numberline {2.6}OS-Modul}{3}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Math-Modul}{3}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Struktur des Python-Programms}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Objektorientierte Programmierung}{4}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Klasse Datensatz}{4}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Kindklasse Funktion}{6}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Klasse Punkt}{7}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Exception-Handling}{8}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Lösungen der Aufgabenstellungen}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Passungen aus Trainings- und Idealfunktion}{10}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Anpassbare Testpunkte}{11}{section.4.2}%
+\contentsline {section}{\numberline {4.3}SQLite-Export}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Anwendung von Unit-Tests}{12}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Reflexion des Python-Programms}{13}{chapter.5}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
