@@ -15,12 +15,6 @@ from sqlalchemy import text
 import sqlalchemy as db
 from tkinter import *
 from tkinter import filedialog
-#import sys
-
-
-#Daten aus einer CSV-Datei in einen Dataframe laden
-#im Pfad "\" durch "/" ersetzen --> "\t" ist bspw. Tabulator
-
 
 class FunktionError (Exception):
     
@@ -215,8 +209,6 @@ class Datensatz():
         else:
             raise DatensatzError('Dem Datensatz wurde kein Dataframe zugewiesen!')
                     
-
-    
     def anzahl_zeilen(self):
         '''
         Diese Methode gibt die Anzahl der Zeilen des Dataframes zurürck.
@@ -233,8 +225,7 @@ class Datensatz():
                         
         else:
             raise DatensatzError('Dem Datensatz wurde kein Dataframe zugewiesen!')
-                    
-            
+                            
     def hole_x_spalte (self):
         '''
         Diese Methode gibt die X-Spalte (X-Werte) der Funktionen des Dataframes
@@ -253,8 +244,6 @@ class Datensatz():
         else:  
             raise DatensatzError('Dem Datensatz wurde kein Dataframe zugewiesen!')
             
-       
-       
     def hole_y_spalte (self, spaltenbez):
         '''
         Diese Methode gibt die Y-Spalte (Y-Werte) der Funktionen des Dataframes
@@ -273,7 +262,6 @@ class Datensatz():
         else:
             raise DatensatzError('Dem Datensatz wurde kein Dataframe zugewiesen!')
                   
-    
     def hole_punkte (self):
         '''
         Diese Methode gibt die Punkte der Funktionen des Dataframes zurürck.
@@ -334,12 +322,10 @@ class Datensatz():
             else:
                 #return self.__dataframe.to_dict('records')  
                 raise DatensatzError
-                
-                
+                   
         except DatensatzError:
             print (DatensatzError().datensatz_message)
           
-    
 class Punkt ():
     
     def __init__(self, x_wert,y_wert):
@@ -362,7 +348,6 @@ class Punkt ():
         else:
             raise PunktError (PunktError().punkt_message)           
                
-        
     def hole_x_wert (self):
         '''
         Diese Methode gibt den X-Wert zurück.
@@ -398,7 +383,6 @@ class Punkt ():
             print ('Dem Punkt ist kein y-Wert zugeordnet!')
         
     def berechne_y_abweichung (self, p):
-        
         '''
         Diese Methode berechnet die Y-Abweichung von zwei gegebenen Y-Werten.
         
@@ -520,7 +504,6 @@ class Funktion (Datensatz):
         '''               
         return self._dataframe.columns[1]
     
-   
     def hole_y_werte (self):
         '''
         Diese Methode gibt die Y-Werte (zweite Spalte) der Funktion zurück.
@@ -533,8 +516,6 @@ class Funktion (Datensatz):
              
         ''' 
         return self._dataframe[self.hole_funktionsname()]
-    
-   
     
     def hole_funktion (self):
         '''
@@ -549,7 +530,6 @@ class Funktion (Datensatz):
         ''' 
         return self._dataframe
               
-           
 class Trainingsfunktion (Funktion):
     '''
     Diese Klasse erbt von der Elternklasse Funktion. Sie dient dazu, um der 
@@ -633,7 +613,6 @@ class Trainingsfunktion (Funktion):
             
             raise DatensatzError (DatensatzError().datensatz_funktion_message)
      
-        
     def setze_idealfunktion (self, idealfunktion):
         '''
         Diese Methode ermöglicht das Zuweisen einer Idealfunktion zur 
@@ -711,8 +690,6 @@ class Idealfunktion (Funktion, Datensatz):
                            'Delta Y':[],'Idealfunktion':[]}
             df_p_test = pd.DataFrame(p_test_data)
     
-    
-    
             #Iteration über die Values des Dictionaries der Punkte Test 
             #--> Liste mit Instanzen der Klasse Punkt
             for v in punkte_test.values():
@@ -748,14 +725,12 @@ class Idealfunktion (Funktion, Datensatz):
                                 continue
                         else:
                             continue
-                                    
             return df_p_test
         
         else:
             raise DatensatzError('Die Variable testdatensatz ist keine Instanz\
                                  der Klasse Datensatz.')
             
-       
     def setze_trainingsfunktion (self,trainingsfunktion):
         '''
         Diese Methode erlaubt das Zuweisen einer Trainingsfunktion
@@ -836,7 +811,6 @@ class Idealfunktion (Funktion, Datensatz):
             raise FunktionError('Der zugewiesene Maximale-Y-Abweichung-Wert ist\
                                 keine Zahl!')
         
-        
     def hole_maximale_y_abweichung (self):
         '''
         Diese Methode gibt den Maximale-Y-Abweichung-Wert zurück.
@@ -885,8 +859,6 @@ class Idealfunktion (Funktion, Datensatz):
 trainingsdatensatz = Datensatz()
 trainingsdatensatz.import_dataframe('Beispiel_Datensaetze/train.csv')
 
-
-
 #Idealdatensatz erstellen (Instanz der Klasse Datensatz)
 idealdatensatz = Datensatz()
 idealdatensatz.import_dataframe('Beispiel_Datensaetze/ideal.csv')
@@ -898,7 +870,6 @@ testdatensatz.import_dataframe('Beispiel_Datensaetze/test.csv')
 #Erstellen zweier Dictionaries zur Verwaltung der Trainings- und Idealfunktionen
 dic_trainingsfunktionen = {}
 dic_idealfunktionen = {}
-
 
 '''
 Füllen der Dictionaries und Zuweisen der Idealfunktionen zur einer 
@@ -1002,8 +973,6 @@ for key,value in dic_trainingsfunktionen.items():
        
     fig.savefig('Trainingsfunktion'+key+'.png')
     
-    #plt.show()
-
 #Plotten der Idealfunktionen inkl. passender Punkte
 #Iteration über das Dicitionary der Idealfunktionen
 for key, value in dic_idealfunktionen.items():
@@ -1021,7 +990,6 @@ for key, value in dic_idealfunktionen.items():
             
         else:
             continue
-        
     '''
     ax.plot = Plot der Idealfunktion
     ax.scatter = Plot der passenden Punkte

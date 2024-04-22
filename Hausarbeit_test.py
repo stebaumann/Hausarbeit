@@ -4,7 +4,6 @@ Created on Sat Apr  6 13:47:13 2024
 
 @author: bauma
 """
-
 import unittest
 import Hausarbeit as ha
 import pandas as pd
@@ -56,8 +55,8 @@ class UnitTestHausarbeit(unittest.TestCase):
         
     def test_pp_berechne_y_abweichung(self):
         '''
-        Diese Methode prüft, ob eine Instanz der Klasse Punkt die richtige Y-Abweichung
-        berechnet.
+        Diese Methode prüft, ob eine Instanz der Klasse Punkt die richtige 
+        Y-Abweichung berechnet.
         '''         
         p_1 = ha.Punkt(2,3)
         p_2 = ha.Punkt(1,2)        
@@ -66,8 +65,8 @@ class UnitTestHausarbeit(unittest.TestCase):
                
     def test_hole_y_abweichung(self):
         '''
-        Diese Methode prüft, ob eine Instanz der Klasse Punkt die richtige Y-Abweichung
-        zurück gibt.
+        Diese Methode prüft, ob eine Instanz der Klasse Punkt die richtige 
+        Y-Abweichung zurück gibt.
         '''  
         d_y = ha.Punkt (2,3)
         d_y.setze_y_abweichung(2)
@@ -76,8 +75,8 @@ class UnitTestHausarbeit(unittest.TestCase):
             
     def test_hole_y_spalte(self):
         '''
-        Diese Methode prüft, ob eine Instanz der Klasse Funktion die richtigen Y-Werte
-        zurückgibt.
+        Diese Methode prüft, ob eine Instanz der Klasse Funktion die richtigen 
+        Y-Werte zurückgibt.
         '''    
         df_dic = {"x":[1,2,3],"Y1":[4,5,6]}
         df = pd.DataFrame(df_dic)
@@ -89,8 +88,8 @@ class UnitTestHausarbeit(unittest.TestCase):
     
     def test_hole_x_spalte(self):
         '''
-        Diese Methode prüft, ob eine Instanz der Klasse Funktion die richtigen X-Werte
-        zurückgibt.
+        Diese Methode prüft, ob eine Instanz der Klasse Funktion die richtigen
+        X-Werte zurückgibt.
         '''    
         df_dic = {"x":[1,2,3],"Y1":[4,5,6]}
         df = pd.DataFrame(df_dic)
@@ -102,8 +101,8 @@ class UnitTestHausarbeit(unittest.TestCase):
               
     def test_hole_anzahl_zeilen(self):
         '''
-        Diese Methode prüft, ob eine Instanz der Klasse Funktion die richtige Anzahl
-        an Werten zurückgibt.
+        Diese Methode prüft, ob eine Instanz der Klasse Funktion die richtige 
+        Anzahl an Werten zurückgibt.
         '''    
         df_dic = {"x":[1,2,3],"Y1":[4,5,6]}
         df = pd.DataFrame(df_dic)
@@ -137,8 +136,7 @@ class UnitTestHausarbeit(unittest.TestCase):
         f_i.suche_idealfunktion(ds)
         result = f_i.hole_idealfunktion().hole_funktionsname()
                 
-        self.assertEqual(result,'y1' , 'Der Funktionsname sollte Y1 sein')
-        
+        self.assertEqual(result,'y1' , 'Der Funktionsname sollte Y1 sein')   
     
 if __name__ == '__main__':
     unittest.main()
