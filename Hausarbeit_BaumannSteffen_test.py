@@ -5,7 +5,7 @@ Created on Sat Apr  6 13:47:13 2024
 @author: bauma
 """
 import unittest
-import Hausarbeit as ha
+import Hausarbeit_BaumannSteffen as ha
 import pandas as pd
 
 class UnitTestHausarbeit(unittest.TestCase):
